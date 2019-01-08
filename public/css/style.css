@@ -13,6 +13,7 @@ body{
 
 h1, h2, h3, h4, h5, h6 {
     color: #496174;
+    /* color: white; */
 }
 
 p{  
@@ -29,7 +30,7 @@ p{
 /*===== common ====*/
 .bg-color{
     /* background-color: #01BF86 !important; */
-    background-color: black !important;
+    background-color: #ff7657 !important;
 }
 
 section{
@@ -89,7 +90,7 @@ h1.section-title::after {
 
 .btn.btn-default {
     /* background-color: #01bf86; */
-    background-color: black;
+    background-color: #ff7657;
     border-color: transparent;
     border-radius: 30px;
     color: #fff;
@@ -241,8 +242,8 @@ header{
 }
 
 .btn.btn-default.navbar-btn {
-    /* background-color: #01bf86; */
-    background-color: black;
+    background-color: #ff7657;
+    /* background-color: black; */
     border-radius: 4px;
     color: #ffffff;
     font-weight: 600;
@@ -261,8 +262,68 @@ header{
     text-decoration: none;
     /* background-color: black; */
 }
-    
 
+/* RECIPE CARDS */
+
+.recipeCard {
+    border: 1px solid black; 
+    border-radius: 7px;
+    margin: 1rem;
+    width: 22%;
+    position: relative;
+    background-color:#ff7657;
+
+    /* float: none; */
+    /* height: 50%; */
+    /* justify-content: space-between; */
+}
+
+.card-img-top {
+    width:100%; 
+    margin-top: 5%;
+}
+
+.card-body {
+    /* height: 100%; */
+}
+
+.card-title .card-text {
+    /* white-space: pre-wrap; */
+}
+
+.btn.btn-default.recipeBtn {
+    width: 100%; 
+    background-color:#ff7657;
+    bottom: 0;
+    /* top: 100; */
+    /* position:  */
+    margin: 5 0;
+    margin-top:auto;
+    /* margin-bottom: auto; */
+
+}
+.btn.btn-default.closeBtn {
+    width: 10%; 
+    background-color:#ff7657;
+    bottom: 0;
+    /* top: 100; */
+    /* position:  */
+    margin: 5 0;
+    margin-top:auto;
+    /* margin-bottom: auto; */
+
+}
+
+/* #recipeDisplay {
+    position: relative;
+} */
+
+
+    
+/* hr {
+    background-color: black;
+    height: 5px;
+} */
 
 /* media quaries */
 @media screen and (max-width: 768px){
@@ -294,6 +355,9 @@ header{
     .default-menu.navbar-default .navbar-nav > li:first-child > a{
         padding-left: 20px !important;
     }
+    .btn.btn-info, .btn.btn-success {
+        width: 100%;
+    }
 }
 
 .default-menu.menu-4{
@@ -301,11 +365,13 @@ header{
 }
 
 .default-menu.menu-4 .default-logo{
-    color: #496174;
+    /* color: #496174; */
+    color: white;
 }
 
 .default-menu.menu-4 .navbar-nav > li > a{
-    color: #999;
+    /* color: #999; */
+    color: white;
 }
 
 .default-menu.menu-4 .navbar-nav > li > a:before,
@@ -328,13 +394,20 @@ header{
     .default-menu.menu-4 .navbar-nav > li > a:hover:before{
         color: transparent; 
     }
+
 }
+
+
+
+
+
+
 
 /*===== intro ====*/
 .intro{
     height: 100vh;
     background-color: lightgrey;
-    background: url("../images/blake-connally-373084-unsplash.jpg") no-repeat fixed top center/ cover;
+    background: url("../images/foodCover2.jpg") no-repeat fixed top center/ cover;
     /* background: url("../images/jerry-kiesewetter-198984-unsplash.jpg") no-repeat fixed top center/ cover; */
     
 }
@@ -501,6 +574,10 @@ header{
 }
 
 /*===== our service ====*/
+
+#recipes {
+    /* background-color: red; */
+}
 /* 
 .work {
     background-color:#F3F6FA;
@@ -640,7 +717,7 @@ header{
     font-size: 15px;
     font-weight: 600; 
     /* color: #466B77; */
-    color: black;
+    color: grey;
     margin-top: 15px;
 }
 
@@ -987,14 +1064,14 @@ strong.expert-tag{
 
 .social-links .fa {
     /* color: #01bf86 ; */
-    color: black ;
+    color: #ff7657 ;
     cursor: pointer;
     height: 40px;
     padding-top: 13px;
     text-align: center;
     width: 40px;
     /* border: 1px solid #01bf86 ; */
-    border: 1px solid black ;
+    border: 1px solid #ff7657 ;
 }
 
 .social-links .fa:hover{
@@ -1024,7 +1101,7 @@ strong.expert-tag{
 
 .footer span i.lnr {
     /* background-color: #01BF86; */
-    background-color: black;
+    background-color: #ff7657;
     color: #fff;
     cursor: pointer;
     float: right;
@@ -1033,4 +1110,57 @@ strong.expert-tag{
     margin-top: 0;
     padding: 7px;
     width: 30px;
+}
+
+
+@media screen and (max-width: 991px) {
+    .recipeCard {
+        width: 100%;
+    }
+
+    #recipeImage {
+        width: 90vw;
+    }
+    .btn.btn-default.closeBtn, #recipes {
+    
+        width: 100vw;
+    }
+    #closeDiv {
+        justify-content: center;
+    }
+    #getReicipesForm, #search, #getReicipesFormA, #searchComplex {
+        flex-direction: column;
+    }
+
+    #getReicipesForm, #getReicipesFormA {
+        border: none;
+    }
+
+
+    
+.panel-heading {
+    background-color: #ff7657;
+}
+
+
+    #searchIngredientInput, #searchIngredientBtn, #randomRecipeBtn,#getRecipesBtn, #random, #searchComplexIngredientInput, #searchComplexBtn {
+        width: 100%;
+        /* margin: 5%; */
+    }
+
+    .intro-content > h1 {
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+    }
+       
+    .intro-content > p {
+        font-size: 10px;
+        font-style: italic;
+        line-height: 1.5;
+        margin-bottom: 45px;
+        max-width: 250px;
+    }
+    
 }
